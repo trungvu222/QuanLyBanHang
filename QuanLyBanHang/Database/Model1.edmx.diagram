@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8625bac46fd44499b4168d748e739216" Name="Diagram1">
+        <EntityTypeShape EntityType="QLBanHangModel.sysdiagram" Width="1.5" PointX="10.625" PointY="2.25" />
+        <EntityTypeShape EntityType="QLBanHangModel.tblChatLieu" Width="1.5" PointX="5.5" PointY="4.375" />
+        <EntityTypeShape EntityType="QLBanHangModel.tblChiTietHDBan" Width="1.5" PointX="7.75" PointY="1.125" />
+        <EntityTypeShape EntityType="QLBanHangModel.tblHang" Width="1.5" PointX="7.875" PointY="4.5" />
+        <EntityTypeShape EntityType="QLBanHangModel.tblHDBan" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="QLBanHangModel.tblKhachHang" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="QLBanHangModel.tblNhanVien" Width="1.5" PointX="3.125" PointY="3.875" />
+        <AssociationConnector Association="QLBanHangModel.FK_tblHang_tblChatLieu" />
+        <AssociationConnector Association="QLBanHangModel.FK_tblChiTietHDBan_tblHang" />
+        <AssociationConnector Association="QLBanHangModel.FK_tblChiTietHDBan_tblHDBan1" />
+        <AssociationConnector Association="QLBanHangModel.FK_tblHDBan_tblKhachHang" />
+        <AssociationConnector Association="QLBanHangModel.FK_tblHDBan_tblNhanVien" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
