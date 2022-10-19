@@ -80,7 +80,7 @@ namespace QuanLyBanHang
 
         private void btnOpenURL_Click(object sender, EventArgs e)
         {
-            string url = "https://www.facebook.com/profile.php?id=100008234645040"; // URL cần được mở trên trình duyệt
+            string url = "https://www.facebook.com/vuthanhtrung123/"; // URL cần được mở trên trình duyệt
             Process.Start(url); // Thực hiện mở URL trên trình duyệt
         }
 
@@ -98,7 +98,7 @@ namespace QuanLyBanHang
 
         private void btnOpenURL3_Click(object sender, EventArgs e)
         {
-            string url = "https://www.instagram.com/congkha47/";
+            string url = "https://www.instagram.com/tt.teddy_12/";
             Process.Start(url);
         }
 
