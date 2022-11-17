@@ -32,6 +32,7 @@ namespace QuanLyBanHang
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMHangHoa));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExportExcel = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -73,6 +74,7 @@ namespace QuanLyBanHang
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnExportExcel);
             this.panel1.Controls.Add(this.statusStrip1);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnHienThiDS);
@@ -83,16 +85,29 @@ namespace QuanLyBanHang
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 434);
+            this.panel1.Location = new System.Drawing.Point(0, 473);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1042, 105);
+            this.panel1.Size = new System.Drawing.Size(1042, 149);
             this.panel1.TabIndex = 3;
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.AutoSize = true;
+            this.btnExportExcel.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportExcel.Location = new System.Drawing.Point(452, 79);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(135, 45);
+            this.btnExportExcel.TabIndex = 19;
+            this.btnExportExcel.Text = "ExportExcel";
+            this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 83);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 127);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1042, 22);
             this.statusStrip1.TabIndex = 18;
@@ -224,7 +239,7 @@ namespace QuanLyBanHang
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1042, 244);
+            this.panel3.Size = new System.Drawing.Size(1042, 240);
             this.panel3.TabIndex = 4;
             // 
             // txtDonGiaBan
@@ -411,9 +426,9 @@ namespace QuanLyBanHang
             // 
             this.dgvHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHang.Location = new System.Drawing.Point(0, 244);
+            this.dgvHang.Location = new System.Drawing.Point(0, 240);
             this.dgvHang.Name = "dgvHang";
-            this.dgvHang.Size = new System.Drawing.Size(1042, 190);
+            this.dgvHang.Size = new System.Drawing.Size(1042, 233);
             this.dgvHang.TabIndex = 5;
             this.dgvHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHang_CellClick);
             // 
@@ -428,7 +443,7 @@ namespace QuanLyBanHang
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1042, 539);
+            this.ClientSize = new System.Drawing.Size(1042, 622);
             this.Controls.Add(this.dgvHang);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -487,5 +502,6 @@ namespace QuanLyBanHang
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnExportExcel;
     }
 }

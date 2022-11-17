@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using QuanLyBanHang.Class;
 
 namespace QuanLyBanHang
 {
@@ -19,34 +20,29 @@ namespace QuanLyBanHang
             InitializeComponent();
         }
 
+        Modify modify = new Modify();
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.QLBanHangConnectionString;
-            try
+            string tentk = txtTaiKhoan.Text;
+            string matkhau = txtMatKhau.Text;
+            if (tentk.Trim() == "") { MessageBox.Show("Vui lòng nhập tên tài khoản!"); }
+            else if (matkhau.Trim() == "") { MessageBox.Show("Vui lòng nhập mật khẩu!"); }
+            else
             {
-                conn.Open();
-                string tk = txtTaiKhoan.Text;
-                string mk = txtMatKhau.Text;
-                string sql = "SELECT *FROM tblDangNhap WHERE TaiKhoan='" + tk + "' and MatKhau='" + mk + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader dta = cmd.ExecuteReader();
-                if(dta.Read()==true)
+                string query = "Select * from tblDangNhap where TaiKhoan = '" + tentk + "' and MatKhau = '" + matkhau + "'";
+                if(modify.TaiKhoans(query).Count!=0)
                 {
-                    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Hiển thị form Main
-                    frmMain frm = new frmMain(tk);
-                    frm.Show(); // Hiển thị form Main
-                    this.Hide(); // Ẩn form Login
+                    MessageBox.Show("Đăng nhập thành công!","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    this.Hide();
+                    frmMain frM = new frmMain(tentk);
+                    frM.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Lỗi kết nối");
             }
         }
 
@@ -79,6 +75,23 @@ namespace QuanLyBanHang
         {
             if (e.KeyCode == Keys.Enter)
                 SendKeys.Send("{TAB}");
+        }
+
+        private void linkLabel_QuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmQuenMatKhau quenMatKhau = new frmQuenMatKhau();
+            quenMatKhau.ShowDialog();
+        }
+
+        private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmDangKy dangKy = new frmDangKy();
+            dangKy.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

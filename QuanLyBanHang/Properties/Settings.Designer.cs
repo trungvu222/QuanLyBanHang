@@ -26,11 +26,11 @@ namespace QuanLyBanHang.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=THANHTRUNG\\SQLEXPRESS01;Initial Catalog=QLBanHang;Integrated Security" +
-            "=True")]
-        public string QLBanHangConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=THANHTRUNG\\SQLEXPRESS01;Initial Catalog=QuanLyBanHang;Integrated Secu" +
+            "rity=True")]
+        public string QuanLyBanHangConnectionString {
             get {
-                return ((string)(this["QLBanHangConnectionString"]));
+                return ((string)(this["QuanLyBanHangConnectionString"]));
             }
         }
     }

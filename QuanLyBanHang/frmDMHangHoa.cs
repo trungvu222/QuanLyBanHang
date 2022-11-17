@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using OfficeOpenXml;
+using Excel = Microsoft.Office.Interop.Excel;
 using QuanLyBanHang.Class;
 
 namespace QuanLyBanHang
@@ -28,7 +31,7 @@ namespace QuanLyBanHang
             btnLuu.Enabled = false;
             btnBoQua.Enabled = false;
             LoadDataGridView();
-            Functions.FillCombo(sql, cboMaChatLieu, "IdChatLieu", "TenChatLieu");
+            Functions.FillCombo(sql, cboMaChatLieu, "maChatLieu", "TenChatLieu");
             cboMaChatLieu.SelectedIndex = -1;
             ResetValues();
         }
@@ -38,7 +41,7 @@ namespace QuanLyBanHang
         {
             string sql;
             sql = "SELECT A.MaHang,A.TenHang,B.MaChatLieu,A.SoLuong,A.DonGiaNhap,A.GiaBan,A.Anh,A.GhiChu " +
-                "FROM tblHang AS A INNER JOIN tblChatLieu AS B ON A.IdChatLieu = B.IdChatLieu";
+                "FROM tblHang AS A INNER JOIN tblChatLieu AS B ON A.maChatLieu = B.maChatLieu";
             tblH = Functions.GetDataToTable(sql);
             dgvHang.DataSource = tblH;
             dgvHang.Columns[0].HeaderText = "Mã hàng";
@@ -160,7 +163,7 @@ namespace QuanLyBanHang
                 txtMaHang.Focus();
                 return;
             }
-            sql = "INSERT INTO tblHang(MaHang,TenHang,IdChatLieu,SoLuong,DonGiaNhap,GiaBan,Anh,Ghichu) VALUES(N'"
+            sql = "INSERT INTO tblHang(MaHang,TenHang,maChatLieu,SoLuong,DonGiaNhap,GiaBan,Anh,Ghichu) VALUES(N'"
                 + txtMaHang.Text.Trim() + "',N'" + txtTenHang.Text.Trim() +
                 "',N'" + cboMaChatLieu.SelectedValue.ToString() +
                 "'," + txtSoLuong.Text.Trim() + "," + txtDonGiaNhap.Text +
@@ -222,7 +225,7 @@ namespace QuanLyBanHang
                 return;
             }
             sql = "UPDATE tblHang SET TenHang=N'" + txtTenHang.Text.Trim().ToString() +
-                "',IdChatLieu=N'" + cboMaChatLieu.SelectedValue.ToString() +
+                "',maChatLieu=N'" + cboMaChatLieu.SelectedValue.ToString() +
                 "',SoLuong=" + txtSoLuong.Text +
                 ",Anh='" + txtAnh.Text + "',Ghichu=N'" + txtGhiChu.Text + "' WHERE MaHang=N'" + txtMaHang.Text + "'";
             Functions.RunSQL(sql);
@@ -278,7 +281,7 @@ namespace QuanLyBanHang
             if (txtTenHang.Text != "")
                 sql += " AND TenHang LIKE N'%" + txtTenHang.Text + "%'";
             if (cboMaChatLieu.Text != "")
-                sql += " AND IdChatLieu LIKE N'%" + cboMaChatLieu.SelectedValue + "%'";
+                sql += " AND maChatLieu LIKE N'%" + cboMaChatLieu.SelectedValue + "%'";
             tblH = Functions.GetDataToTable(sql);
             if (tblH.Rows.Count == 0)
                 MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -290,7 +293,7 @@ namespace QuanLyBanHang
         private void btnHienThiDS_Click(object sender, EventArgs e)
         {
             string sql;
-            sql = "SELECT MaHang,TenHang,IdChatLieu,SoLuong,DonGiaNhap,Anh,GiaBan,Ghichu FROM tblHang";
+            sql = "SELECT MaHang,TenHang,maChatLieu,SoLuong,DonGiaNhap,Anh,GiaBan,Ghichu FROM tblHang";
             tblH = Functions.GetDataToTable(sql);
             dgvHang.DataSource = tblH;
         }
@@ -351,6 +354,45 @@ namespace QuanLyBanHang
         {
             if (e.KeyCode == Keys.Enter)
                 SendKeys.Send("{TAB}");
+        }
+
+        private void ExportExcel(string path)
+        {
+            Excel.Application application = new Excel.Application();
+            application.Application.Workbooks.Add(Type.Missing);
+            for(int i=0;i<dgvHang.Columns.Count;i++)
+            {
+                application.Cells[1, i + 1] = dgvHang.Columns[i].HeaderText;
+            }
+            for(int i=0;i<dgvHang.Rows.Count;i++)
+            {
+                for(int j=0;j<dgvHang.Columns.Count;j++)
+                {
+                    application.Cells[i + 2, j + 1] = dgvHang.Rows[i].Cells[j].Value;
+                }
+            }
+            application.Columns.AutoFit();
+            application.ActiveWorkbook.SaveCopyAs(path);
+            application.ActiveWorkbook.Saved = true;
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Export Excel";
+            saveFileDialog.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if(saveFileDialog.ShowDialog()==DialogResult.OK)
+            {
+                try
+                {
+                    ExportExcel(saveFileDialog.FileName);
+                    MessageBox.Show("Xuất file thành công!");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Xuất file không thành công!\n" + ex.Message);
+                }
+            }
         }
     }
 }

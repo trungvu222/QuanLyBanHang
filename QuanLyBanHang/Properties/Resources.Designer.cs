@@ -63,6 +63,26 @@ namespace QuanLyBanHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0c02df78817ebf9f2eaa44afa0499a51 {
+            get {
+                object obj = ResourceManager.GetObject("0c02df78817ebf9f2eaa44afa0499a51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1633978907_149_Tong_Hop_101_anh_dong_hoat_hinh_dep_de_thuong {
+            get {
+                object obj = ResourceManager.GetObject("1633978907_149_Tong-Hop-101-anh-dong-hoat-hinh-dep-de-thuong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_row {
             get {
                 object obj = ResourceManager.GetObject("add_row", resourceCulture);
@@ -173,6 +193,26 @@ namespace QuanLyBanHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Diem_danh_14_mat_hang_kinh_doanh_online_ban_chay_nhat_hien_nay_Phan_1_21 {
+            get {
+                object obj = ResourceManager.GetObject("Diem-danh-14-mat-hang-kinh-doanh-online-ban-chay-nhat-hien-nay-Phan-1-21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Diem_danh_14_mat_hang_kinh_doanh_online_ban_chay_nhat_hien_nay_Phan_1_22 {
+            get {
+                object obj = ResourceManager.GetObject("Diem-danh-14-mat-hang-kinh-doanh-online-ban-chay-nhat-hien-nay-Phan-1-22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dismiss_contrast_white {
             get {
                 object obj = ResourceManager.GetObject("dismiss.contrast-white", resourceCulture);
@@ -186,6 +226,16 @@ namespace QuanLyBanHang.Properties {
         internal static System.Drawing.Bitmap dismiss1 {
             get {
                 object obj = ResourceManager.GetObject("dismiss1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dismiss2 {
+            get {
+                object obj = ResourceManager.GetObject("dismiss2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +286,16 @@ namespace QuanLyBanHang.Properties {
         internal static System.Drawing.Bitmap icon_delete_2x {
             get {
                 object obj = ResourceManager.GetObject("icon-delete@2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imager_1_32515_700 {
+            get {
+                object obj = ResourceManager.GetObject("imager_1_32515_700", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

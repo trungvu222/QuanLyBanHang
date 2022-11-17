@@ -14,10 +14,10 @@ namespace QuanLyBanHang
 {
     public partial class frmMain : Form
     {
-        public frmMain(string tk)
+        public frmMain(string tentk)
         {
             InitializeComponent();
-            lbUsername.Text = tk;
+            lbUsername.Text = tentk;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -78,34 +78,32 @@ namespace QuanLyBanHang
             frm.Show();
         }
 
-        private void btnOpenURL_Click(object sender, EventArgs e)
-        {
-            string url = "https://www.facebook.com/vuthanhtrung123/"; // URL cần được mở trên trình duyệt
-            Process.Start(url); // Thực hiện mở URL trên trình duyệt
-        }
-
-        private void btnOpenURL1_Click(object sender, EventArgs e)
-        {
-            string url = "https://chat.zalo.me/?null";
-            Process.Start(url);
-        }
-
-        private void btnOpenURL2_Click(object sender, EventArgs e)
+        private void btnOpenURL2_Click_1(object sender, EventArgs e)
         {
             string url = "https://web.skype.com/";
             Process.Start(url);
         }
 
-        private void btnOpenURL3_Click(object sender, EventArgs e)
+        private void btnOpenURL_Click_1(object sender, EventArgs e)
         {
-            string url = "https://www.instagram.com/tt.teddy_12/";
+            string url = "https://www.facebook.com/vuthanhtrung123/"; // URL cần được mở trên trình duyệt
+            Process.Start(url); // Thực hiện mở URL trên trình duyệt
+        }
+
+        private void btnOpenURL4_Click_1(object sender, EventArgs e)
+        {
+            string url = "https://github.com/trungvu222/QuanLyBanHang";
             Process.Start(url);
         }
 
-        private void btnOpenURL4_Click(object sender, EventArgs e)
+        private void btnDangXuat_Click_1(object sender, EventArgs e)
         {
-            string url = "https://github.com/trungvu222/Winform";
-            Process.Start(url);
+            if (MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.Hide();
+                frmLogin login = new frmLogin();
+                login.ShowDialog();
+            }
         }
     }
 }

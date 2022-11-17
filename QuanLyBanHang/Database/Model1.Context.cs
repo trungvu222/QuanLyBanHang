@@ -13,10 +13,10 @@ namespace QuanLyBanHang.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLBanHangEntities : DbContext
+    public partial class QuanLyBanHangEntities1 : DbContext
     {
-        public QLBanHangEntities()
-            : base("name=QLBanHangEntities")
+        public QuanLyBanHangEntities1()
+            : base("name=QuanLyBanHangEntities1")
         {
         }
     
@@ -28,6 +28,7 @@ namespace QuanLyBanHang.Database
         public DbSet<sysdiagram> sysdiagrams { get; set; }
         public DbSet<tblChatLieu> tblChatLieux { get; set; }
         public DbSet<tblChiTietHDBan> tblChiTietHDBans { get; set; }
+        public DbSet<tblDangNhap> tblDangNhaps { get; set; }
         public DbSet<tblHang> tblHangs { get; set; }
         public DbSet<tblHDBan> tblHDBans { get; set; }
         public DbSet<tblKhachHang> tblKhachHangs { get; set; }

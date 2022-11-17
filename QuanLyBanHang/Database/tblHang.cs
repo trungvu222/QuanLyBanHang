@@ -21,7 +21,7 @@ namespace QuanLyBanHang.Database
     
         public string MaHang { get; set; }
         public string TenHang { get; set; }
-        public Nullable<int> IdChatLieu { get; set; }
+        public Nullable<int> maChatLieu { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<double> DonGiaNhap { get; set; }
         public string Anh { get; set; }

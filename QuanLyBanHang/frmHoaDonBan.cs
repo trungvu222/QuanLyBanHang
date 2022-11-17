@@ -17,7 +17,7 @@ namespace QuanLyBanHang
     public partial class frmHoaDonBan : Form
     {
         DataTable tblCTHDB; //Bảng chi tiết hoá đơn bán
-        private QLBanHangEntities db = new QLBanHangEntities();
+        private QuanLyBanHangEntities1 db = new QuanLyBanHangEntities1();
         public frmHoaDonBan()
         {
             InitializeComponent();
@@ -345,7 +345,7 @@ namespace QuanLyBanHang
             exRange.Range["B1:B1"].ColumnWidth = 15;
             exRange.Range["A1:B1"].MergeCells = true;
             exRange.Range["A1:B1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-            exRange.Range["A1:B1"].Value = "Cửa hàng lưu niệm";
+            exRange.Range["A1:B1"].Value = "Cửa hàng quà lưu niệm";
             exRange.Range["A2:B2"].MergeCells = true;
             exRange.Range["A2:B2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
             exRange.Range["A2:B2"].Value = "Gò Vấp - TP.HCM";

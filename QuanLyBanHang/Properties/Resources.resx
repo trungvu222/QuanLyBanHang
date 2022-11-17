@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Diem-danh-14-mat-hang-kinh-doanh-online-ban-chay-nhat-hien-nay-Phan-1-22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diem-danh-14-mat-hang-kinh-doanh-online-ban-chay-nhat-hien-nay-Phan-1-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SplashScreen.scale-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SplashScreen.scale-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="Shelf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shelf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1633978907_149_Tong-Hop-101-anh-dong-hoat-hinh-dep-de-thuong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1633978907_149_Tong-Hop-101-anh-dong-hoat-hinh-dep-de-thuong.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="saveicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saveicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -165,6 +171,9 @@
   </data>
   <data name="Diem-danh-14-mat-hang-kinh-doanh-online-ban-chay-nhat-hien-nay-Phan-1-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diem-danh-14-mat-hang-kinh-doanh-online-ban-chay-nhat-hien-nay-Phan-1-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FeatureToastDlpImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FeatureToastDlpImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="findResults" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\findResults.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +211,14 @@
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="imager_1_32515_700" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imager_1_32515_700.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SquareTile44x44.scale-400" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SquareTile44x44.scale-400.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0c02df78817ebf9f2eaa44afa0499a51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0c02df78817ebf9f2eaa44afa0499a51.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-delete@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-delete@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +232,10 @@
   <data name="Square150x150Logo.scale-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Square150x150Logo.scale-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FeatureToastDlpImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FeatureToastDlpImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Diem-danh-14-mat-hang-kinh-doanh-online-ban-chay-nhat-hien-nay-Phan-1-21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diem-danh-14-mat-hang-kinh-doanh-online-ban-chay-nhat-hien-nay-Phan-1-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dismiss2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dismiss.contrast-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

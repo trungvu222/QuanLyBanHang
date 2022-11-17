@@ -135,7 +135,7 @@ namespace QuanLyBanHang
             sql = "UPDATE tblChatLieu SET TenChatLieu=N'" +
                 txtTenChatLieu.Text.ToString() +
                 "' WHERE MaChatLieu=N'" + txtMaChatLieu.Text + "'";
-            Class.Functions.RunSQL(sql);
+            Functions.RunSQL(sql);
             LoadDataGridView();
             ResetValue();
 
@@ -158,7 +158,7 @@ namespace QuanLyBanHang
             if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 sql = "DELETE tblChatLieu WHERE MaChatLieu=N'" + txtMaChatLieu.Text + "'";
-                Class.Functions.RunSQL(sql);
+                Functions.RunSQL(sql);
                 LoadDataGridView();
                 ResetValue();
             }

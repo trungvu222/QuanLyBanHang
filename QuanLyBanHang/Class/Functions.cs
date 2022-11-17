@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;    // Su dung doi tuong MessageBox
+using System.Windows.Forms;   // Su dung doi tuong MessageBox
+using System.IO;
 
 namespace QuanLyBanHang.Class
 {
@@ -15,8 +16,10 @@ namespace QuanLyBanHang.Class
         // Tao phuong thuc Connect()
         public static void Connect()
         {
-            Con = new SqlConnection();
-            Con.ConnectionString = Properties.Settings.Default.QLBanHangConnectionString;
+            Con = new SqlConnection
+            {
+                ConnectionString = Properties.Settings.Default.QuanLyBanHangConnectionString
+            };
             if (Con.State != ConnectionState.Open)
             {
                 Con.Open();    // Mo ket noi
@@ -47,9 +50,11 @@ namespace QuanLyBanHang.Class
         public static void RunSQL(string sql)
         {
             SqlCommand cmd; //Đối tượng thuộc lớp SqlCommand
-            cmd = new SqlCommand();
-            cmd.Connection = Con; //Gán kết nối
-            cmd.CommandText = sql; //Gán lệnh SQL
+            cmd = new SqlCommand
+            {
+                Connection = Con, //Gán kết nối
+                CommandText = sql //Gán lệnh SQL
+            };
             try
             {
                 cmd.ExecuteNonQuery(); //Thực hiện câu lệnh SQL
@@ -59,7 +64,6 @@ namespace QuanLyBanHang.Class
                 MessageBox.Show(ex.ToString());
             }
             cmd.Dispose();//Giải phóng bộ nhớ
-            cmd = null;
         }
         //Hàm kiểm tra khoá trùng
         public static bool CheckKey(string sql)
