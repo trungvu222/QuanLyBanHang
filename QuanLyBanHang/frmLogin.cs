@@ -120,11 +120,11 @@ namespace QuanLyBanHang
             quenMatKhau.ShowDialog();
         }
 
-        private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmDangKy dangKy = new frmDangKy();
-            dangKy.ShowDialog();
-        }
+        //private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        //{
+        //    frmDangKy dangKy = new frmDangKy();
+        //    dangKy.ShowDialog();
+        //}
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {

@@ -38,7 +38,6 @@ namespace QuanLyBanHang
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.linkLabel_QuenMatKhau = new System.Windows.Forms.LinkLabel();
-            this.linkLabel_DangKy = new System.Windows.Forms.LinkLabel();
             this.pHide = new System.Windows.Forms.PictureBox();
             this.pShow = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -127,25 +126,13 @@ namespace QuanLyBanHang
             // 
             this.linkLabel_QuenMatKhau.AutoSize = true;
             this.linkLabel_QuenMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel_QuenMatKhau.Location = new System.Drawing.Point(126, 471);
+            this.linkLabel_QuenMatKhau.Location = new System.Drawing.Point(172, 465);
             this.linkLabel_QuenMatKhau.Name = "linkLabel_QuenMatKhau";
             this.linkLabel_QuenMatKhau.Size = new System.Drawing.Size(134, 20);
             this.linkLabel_QuenMatKhau.TabIndex = 8;
             this.linkLabel_QuenMatKhau.TabStop = true;
             this.linkLabel_QuenMatKhau.Text = "Quên Mật Khẩu?";
             this.linkLabel_QuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_QuenMatKhau_LinkClicked);
-            // 
-            // linkLabel_DangKy
-            // 
-            this.linkLabel_DangKy.AutoSize = true;
-            this.linkLabel_DangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel_DangKy.Location = new System.Drawing.Point(284, 471);
-            this.linkLabel_DangKy.Name = "linkLabel_DangKy";
-            this.linkLabel_DangKy.Size = new System.Drawing.Size(72, 20);
-            this.linkLabel_DangKy.TabIndex = 9;
-            this.linkLabel_DangKy.TabStop = true;
-            this.linkLabel_DangKy.Text = "Đăng Ký";
-            this.linkLabel_DangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_DangKy_LinkClicked);
             // 
             // pHide
             // 
@@ -194,8 +181,6 @@ namespace QuanLyBanHang
             // cbLogin
             // 
             this.cbLogin.AutoSize = true;
-            this.cbLogin.Checked = true;
-            this.cbLogin.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbLogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLogin.Location = new System.Drawing.Point(130, 439);
             this.cbLogin.Name = "cbLogin";
@@ -241,7 +226,6 @@ namespace QuanLyBanHang
             this.Controls.Add(this.pHide);
             this.Controls.Add(this.pShow);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.linkLabel_DangKy);
             this.Controls.Add(this.linkLabel_QuenMatKhau);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnThoat);
@@ -279,7 +263,6 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel_QuenMatKhau;
-        private System.Windows.Forms.LinkLabel linkLabel_DangKy;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pShow;
         private System.Windows.Forms.PictureBox pHide;
