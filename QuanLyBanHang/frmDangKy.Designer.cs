@@ -40,7 +40,15 @@ namespace QuanLyBanHang
             this.textBox_Email = new System.Windows.Forms.TextBox();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pShow = new System.Windows.Forms.PictureBox();
+            this.ptShow = new System.Windows.Forms.PictureBox();
+            this.pHide = new System.Windows.Forms.PictureBox();
+            this.ptHide = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pShow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptShow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptHide)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,9 +85,9 @@ namespace QuanLyBanHang
             // 
             this.textBox_MatKhau.Location = new System.Drawing.Point(244, 323);
             this.textBox_MatKhau.Name = "textBox_MatKhau";
+            this.textBox_MatKhau.PasswordChar = '•';
             this.textBox_MatKhau.Size = new System.Drawing.Size(223, 20);
             this.textBox_MatKhau.TabIndex = 1;
-            this.textBox_MatKhau.UseSystemPasswordChar = true;
             this.textBox_MatKhau.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_MatKhau_KeyUp);
             // 
             // label3
@@ -97,9 +105,9 @@ namespace QuanLyBanHang
             // 
             this.textBox_XNMatKhau.Location = new System.Drawing.Point(244, 363);
             this.textBox_XNMatKhau.Name = "textBox_XNMatKhau";
+            this.textBox_XNMatKhau.PasswordChar = '•';
             this.textBox_XNMatKhau.Size = new System.Drawing.Size(223, 20);
             this.textBox_XNMatKhau.TabIndex = 2;
-            this.textBox_XNMatKhau.UseSystemPasswordChar = true;
             this.textBox_XNMatKhau.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_XNMatKhau_KeyUp);
             // 
             // label4
@@ -135,21 +143,70 @@ namespace QuanLyBanHang
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyBanHang.Properties.Resources._1633978907_149_Tong_Hop_101_anh_dong_hoat_hinh_dep_de_thuong;
-            this.pictureBox1.Location = new System.Drawing.Point(68, 26);
+            this.pictureBox1.Image = global::QuanLyBanHang.Properties.Resources.Users;
+            this.pictureBox1.Location = new System.Drawing.Point(93, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(314, 231);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pShow
+            // 
+            this.pShow.Image = global::QuanLyBanHang.Properties.Resources.show;
+            this.pShow.Location = new System.Drawing.Point(475, 323);
+            this.pShow.Name = "pShow";
+            this.pShow.Size = new System.Drawing.Size(27, 20);
+            this.pShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pShow.TabIndex = 15;
+            this.pShow.TabStop = false;
+            this.pShow.Click += new System.EventHandler(this.pShow_Click);
+            // 
+            // ptShow
+            // 
+            this.ptShow.Image = global::QuanLyBanHang.Properties.Resources.show;
+            this.ptShow.Location = new System.Drawing.Point(475, 363);
+            this.ptShow.Name = "ptShow";
+            this.ptShow.Size = new System.Drawing.Size(27, 20);
+            this.ptShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptShow.TabIndex = 16;
+            this.ptShow.TabStop = false;
+            this.ptShow.Click += new System.EventHandler(this.ptShow_Click);
+            // 
+            // pHide
+            // 
+            this.pHide.Image = global::QuanLyBanHang.Properties.Resources.hide;
+            this.pHide.Location = new System.Drawing.Point(475, 323);
+            this.pHide.Name = "pHide";
+            this.pHide.Size = new System.Drawing.Size(27, 20);
+            this.pHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pHide.TabIndex = 17;
+            this.pHide.TabStop = false;
+            this.pHide.Click += new System.EventHandler(this.pHide_Click_1);
+            // 
+            // ptHide
+            // 
+            this.ptHide.Image = global::QuanLyBanHang.Properties.Resources.hide;
+            this.ptHide.Location = new System.Drawing.Point(475, 363);
+            this.ptHide.Name = "ptHide";
+            this.ptHide.Size = new System.Drawing.Size(27, 20);
+            this.ptHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptHide.TabIndex = 18;
+            this.ptHide.TabStop = false;
+            this.ptHide.Click += new System.EventHandler(this.ptHide_Click_1);
+            // 
             // frmDangKy
             // 
+            this.AcceptButton = this.btnDangKy;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.PaleGreen;
-            this.ClientSize = new System.Drawing.Size(503, 490);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(510, 490);
+            this.Controls.Add(this.ptHide);
+            this.Controls.Add(this.pHide);
+            this.Controls.Add(this.ptShow);
+            this.Controls.Add(this.pShow);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.textBox_Email);
             this.Controls.Add(this.textBox_XNMatKhau);
@@ -165,6 +222,10 @@ namespace QuanLyBanHang
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pShow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptShow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptHide)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +243,9 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox_Email;
         private System.Windows.Forms.Button btnDangKy;
+        private System.Windows.Forms.PictureBox pShow;
+        private System.Windows.Forms.PictureBox ptShow;
+        private System.Windows.Forms.PictureBox pHide;
+        private System.Windows.Forms.PictureBox ptHide;
     }
 }

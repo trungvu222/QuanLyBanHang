@@ -196,5 +196,40 @@ namespace QuanLyBanHang
         {
             this.toolStripStatusLabel1.Text = string.Format("Hôm nay là ngày {0} - Bây giờ là {1}", DateTime.Now.ToString("dd/MM/yyyy"), DateTime.Now.ToString("hh:mm:ss tt"));
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if ((txtMaChatLieu.Text == "") && (txtTenChatLieu.Text == ""))
+            {
+                MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            sql = "SELECT * from tblChatLieu Where 1=1";
+            if (txtMaChatLieu.Text != "")
+                sql += " AND MaChatLieu LIKE N'%" + txtMaChatLieu.Text + "%'";
+            if (txtTenChatLieu.Text != "")
+                sql += " AND TenChatLieu LIKE N'%" + txtTenChatLieu.Text + "%'";
+            tblCL = Functions.GetDataToTable(sql);
+            if (tblCL.Rows.Count == 0)
+                MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Có " + tblCL.Rows.Count + "  bản ghi thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dgvChatLieu.DataSource = tblCL;
+            ResetValues();
+        }
+
+        private void ResetValues()
+        {
+            txtMaChatLieu.Text = "";
+            txtTenChatLieu.Text = "";
+        }
+
+        private void btnHienThiDS_Click(object sender, EventArgs e)
+        {
+            string sql;
+            sql = "SELECT MaChatLieu,TenChatLieu FROM tblChatLieu";
+            tblCL = Functions.GetDataToTable(sql);
+            dgvChatLieu.DataSource = tblCL;
+        }
     }
 }

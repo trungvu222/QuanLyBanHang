@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32901.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyBanHang", "QuanLyBanHang\QuanLyBanHang.csproj", "{1FCC92FF-5C8B-4038-8DD5-71AD33028E41}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QLBanHang", "QLBanHang\QLBanHang.vdproj", "{38FF19DD-0AD8-46E9-8677-F8A483745444}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QLBanHang", "QLBanHang\QLBanHang.vdproj", "{6005F0F9-0B1C-4797-9479-85B79557C600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{1FCC92FF-5C8B-4038-8DD5-71AD33028E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FCC92FF-5C8B-4038-8DD5-71AD33028E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FCC92FF-5C8B-4038-8DD5-71AD33028E41}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38FF19DD-0AD8-46E9-8677-F8A483745444}.Debug|Any CPU.ActiveCfg = Debug
-		{38FF19DD-0AD8-46E9-8677-F8A483745444}.Release|Any CPU.ActiveCfg = Release
+		{6005F0F9-0B1C-4797-9479-85B79557C600}.Debug|Any CPU.ActiveCfg = Debug
+		{6005F0F9-0B1C-4797-9479-85B79557C600}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

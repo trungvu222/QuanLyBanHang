@@ -244,5 +244,38 @@ namespace QuanLyBanHang
         {
             this.toolStripStatusLabel1.Text = string.Format("Hôm nay là ngày {0} - Bây giờ là {1}", DateTime.Now.ToString("dd/MM/yyyy"), DateTime.Now.ToString("hh:mm:ss tt"));
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if ((txtMaKhach.Text == "") && (txtTenKhach.Text == "") && (txtDiaChi.Text == "") && (mtbDienThoai.Text == ""))
+            {
+                MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            sql = "SELECT * from tblKhachHang Where 1=1";
+            if (txtMaKhach.Text != "")
+                sql += " AND MaKhach LIKE N'%" + txtMaKhach.Text + "%'";
+            if (txtTenKhach.Text != "")
+                sql += " AND TenKhach LIKE N'%" + txtTenKhach.Text + "%'";
+            if (txtDiaChi.Text != "")
+                sql += " AND DiaChi LIKE N'%" + txtDiaChi.Text + "%'";
+            if (mtbDienThoai.Text != "")
+                sql += " AND DienThoai LIKE N'%" + mtbDienThoai.Text + "%'";
+            tblKH = Functions.GetDataToTable(sql);
+            if (tblKH.Rows.Count == 0)
+                MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Có " + tblKH.Rows.Count + "  bản ghi thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dgvKhachHang.DataSource = tblKH;
+            ResetValues();
+        }
+
+        private void btnHienThiDS_Click(object sender, EventArgs e)
+        {
+            string sql;
+            sql = "SELECT MaKhach,TenKhach,DiaChi,DienThoai FROM tblKhachHang";
+            tblKH = Functions.GetDataToTable(sql);
+            dgvKhachHang.DataSource = tblKH;
+        }
     }
 }

@@ -101,10 +101,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Account.cs" />
     <Compile Include="Class\Connection.cs" />
     <Compile Include="Class\Functions.cs" />
     <Compile Include="Class\Modify.cs" />
     <Compile Include="Class\TaiKhoan.cs" />
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="Database\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +147,18 @@
     </Compile>
     <Compile Include="Database\tblNhanVien.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountProfile.Designer.cs">
+      <DependentUpon>frmAccountProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountStaff.Designer.cs">
+      <DependentUpon>frmAccountStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangKy.cs">
       <SubType>Form</SubType>
@@ -204,6 +220,18 @@
     <Compile Include="frmQuenMatKhau.Designer.cs">
       <DependentUpon>frmQuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongKeHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeHangHoa.Designer.cs">
+      <DependentUpon>frmThongKeHangHoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTimKiemHD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +258,12 @@
       <DependentUpon>QuanLyBanHangDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmAccountProfile.resx">
+      <DependentUpon>frmAccountProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountStaff.resx">
+      <DependentUpon>frmAccountStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDangKy.resx">
       <DependentUpon>frmDangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +293,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuenMatKhau.resx">
       <DependentUpon>frmQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeHangHoa.resx">
+      <DependentUpon>frmThongKeHangHoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTimKiemHD.resx">
       <DependentUpon>frmTimKiemHD.cs</DependentUpon>
@@ -413,6 +453,14 @@
     <None Include="Resources\imager_1_32515_700.jpg" />
     <None Include="Resources\1633978907_149_Tong-Hop-101-anh-dong-hoat-hinh-dep-de-thuong.gif" />
     <None Include="Resources\0c02df78817ebf9f2eaa44afa0499a51.gif" />
+    <None Include="Resources\Users.gif" />
+    <None Include="Resources\closebutton.png" />
+    <None Include="Resources\displaybutton.png" />
+    <None Include="Resources\show.png" />
+    <None Include="Resources\hide.png" />
+    <None Include="Resources\github.png" />
+    <None Include="Resources\facebook.png" />
+    <None Include="Resources\skype.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

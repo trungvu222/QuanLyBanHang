@@ -23,7 +23,7 @@ namespace QuanLyBanHang.Class
             if (Con.State != ConnectionState.Open)
             {
                 Con.Open();    // Mo ket noi
-                MessageBox.Show("Kết nối thành công!");   // Kiem tra ket noi
+                //MessageBox.Show("Kết nối thành công!");   // Kiem tra ket noi
             }
             else
                 MessageBox.Show("Ket noi khong thanh cong!");

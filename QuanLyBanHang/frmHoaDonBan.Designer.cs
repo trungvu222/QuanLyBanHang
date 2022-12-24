@@ -34,7 +34,6 @@ namespace QuanLyBanHang
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.cboMaHDBan = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -78,12 +77,13 @@ namespace QuanLyBanHang
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnDong = new System.Windows.Forms.Button();
             this.btnInHoaDon = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -126,18 +126,6 @@ namespace QuanLyBanHang
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Image = global::QuanLyBanHang.Properties.Resources.findResults;
-            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(488, 13);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(139, 35);
-            this.btnTimKiem.TabIndex = 2;
-            this.btnTimKiem.Text = "&Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // cboMaHDBan
             // 
@@ -371,6 +359,7 @@ namespace QuanLyBanHang
             // 
             // dgvHDBanHang
             // 
+            this.dgvHDBanHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHDBanHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHDBanHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHDBanHang.Location = new System.Drawing.Point(3, 108);
@@ -577,9 +566,15 @@ namespace QuanLyBanHang
             this.panel5.Size = new System.Drawing.Size(1124, 100);
             this.panel5.TabIndex = 3;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // btnDong
             // 
-            this.btnDong.Image = global::QuanLyBanHang.Properties.Resources.appicondefault_ecaa_32;
+            this.btnDong.Image = global::QuanLyBanHang.Properties.Resources.closebutton;
             this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDong.Location = new System.Drawing.Point(767, 44);
             this.btnDong.Name = "btnDong";
@@ -637,11 +632,17 @@ namespace QuanLyBanHang
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // timer1
+            // btnTimKiem
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.btnTimKiem.Image = global::QuanLyBanHang.Properties.Resources.findResults;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(488, 13);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(139, 35);
+            this.btnTimKiem.TabIndex = 2;
+            this.btnTimKiem.Text = "&Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // frmHoaDonBan
             // 

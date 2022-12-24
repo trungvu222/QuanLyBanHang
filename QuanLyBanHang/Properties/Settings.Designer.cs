@@ -33,5 +33,29 @@ namespace QuanLyBanHang.Properties {
                 return ((string)(this["QuanLyBanHangConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string users {
+            get {
+                return ((string)(this["users"]));
+            }
+            set {
+                this["users"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pass {
+            get {
+                return ((string)(this["pass"]));
+            }
+            set {
+                this["pass"] = value;
+            }
+        }
     }
 }

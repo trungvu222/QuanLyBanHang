@@ -71,7 +71,7 @@ namespace QuanLyBanHang
             dtpNgaySinh.Value = (DateTime)dgvNhanVien.CurrentRow.Cells["NgaySinh"].Value;
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
-            btnXoa.Enabled = true;
+            btnBoQua.Enabled = true;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -278,6 +278,37 @@ namespace QuanLyBanHang
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.toolStripStatusLabel1.Text = string.Format("Hôm nay là ngày {0} - Bây giờ là {1}", DateTime.Now.ToString("dd/MM/yyyy"), DateTime.Now.ToString("hh:mm:ss tt"));
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if ((txtMaNhanVien.Text == "") && (txtTenNhanVien.Text == "") && (txtDiaChi.Text == ""))
+            {
+                MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            sql = "SELECT * from tblNhanVien Where 1=1";
+            if (txtMaNhanVien.Text != "")
+                sql += " AND MaNhanVien LIKE N'%" + txtMaNhanVien.Text + "%'";
+            if (txtTenNhanVien.Text != "")
+                sql += " AND TenNhanVien LIKE N'%" + txtTenNhanVien.Text + "%'";
+            if (txtDiaChi.Text != "")
+                sql += " AND DiaChi LIKE N'%" + txtDiaChi.Text + "%'";
+            tblNV = Functions.GetDataToTable(sql);
+            if (tblNV.Rows.Count == 0)
+                MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Có " + tblNV.Rows.Count + "  bản ghi thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dgvNhanVien.DataSource = tblNV;
+            ResetValues();
+        }
+
+        private void btnHienThiDS_Click(object sender, EventArgs e)
+        {
+            string sql;
+            sql = "SELECT MaNhanVien,TenNhanVien,GioiTinh,DiaChi,DienThoai,NgaySinh FROM tblNhanVien";
+            tblNV = Functions.GetDataToTable(sql);
+            dgvNhanVien.DataSource = tblNV;
         }
     }
 }

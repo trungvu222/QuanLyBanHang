@@ -32,6 +32,8 @@ namespace QuanLyBanHang
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMChatLieu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHienThiDS = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnDong = new System.Windows.Forms.Button();
@@ -56,6 +58,8 @@ namespace QuanLyBanHang
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnHienThiDS);
+            this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.statusStrip1);
             this.panel1.Controls.Add(this.btnDong);
             this.panel1.Controls.Add(this.btnBoQua);
@@ -68,6 +72,30 @@ namespace QuanLyBanHang
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(915, 97);
             this.panel1.TabIndex = 2;
+            // 
+            // btnHienThiDS
+            // 
+            this.btnHienThiDS.Image = global::QuanLyBanHang.Properties.Resources.displaybutton;
+            this.btnHienThiDS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHienThiDS.Location = new System.Drawing.Point(678, 22);
+            this.btnHienThiDS.Name = "btnHienThiDS";
+            this.btnHienThiDS.Size = new System.Drawing.Size(127, 31);
+            this.btnHienThiDS.TabIndex = 20;
+            this.btnHienThiDS.Text = "&Hiển thị DS";
+            this.btnHienThiDS.UseVisualStyleBackColor = true;
+            this.btnHienThiDS.Click += new System.EventHandler(this.btnHienThiDS_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Image = global::QuanLyBanHang.Properties.Resources.search;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(547, 22);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(125, 31);
+            this.btnTimKiem.TabIndex = 21;
+            this.btnTimKiem.Text = "&Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // statusStrip1
             // 
@@ -87,9 +115,9 @@ namespace QuanLyBanHang
             // 
             // btnDong
             // 
-            this.btnDong.Image = global::QuanLyBanHang.Properties.Resources.appicondefault_ecaa_32;
+            this.btnDong.Image = global::QuanLyBanHang.Properties.Resources.closebutton;
             this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDong.Location = new System.Drawing.Point(734, 31);
+            this.btnDong.Location = new System.Drawing.Point(811, 22);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(101, 31);
             this.btnDong.TabIndex = 5;
@@ -101,9 +129,9 @@ namespace QuanLyBanHang
             // 
             this.btnBoQua.Image = global::QuanLyBanHang.Properties.Resources.Square44x44Logo_targetsize_24_altform_unplated;
             this.btnBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBoQua.Location = new System.Drawing.Point(605, 31);
+            this.btnBoQua.Location = new System.Drawing.Point(432, 22);
             this.btnBoQua.Name = "btnBoQua";
-            this.btnBoQua.Size = new System.Drawing.Size(101, 31);
+            this.btnBoQua.Size = new System.Drawing.Size(109, 31);
             this.btnBoQua.TabIndex = 4;
             this.btnBoQua.Text = "&Bỏ qua";
             this.btnBoQua.UseVisualStyleBackColor = true;
@@ -113,7 +141,7 @@ namespace QuanLyBanHang
             // 
             this.btnLuu.Image = global::QuanLyBanHang.Properties.Resources.saveicon;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(476, 31);
+            this.btnLuu.Location = new System.Drawing.Point(325, 22);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(101, 31);
             this.btnLuu.TabIndex = 3;
@@ -125,7 +153,7 @@ namespace QuanLyBanHang
             // 
             this.btnSua.Image = global::QuanLyBanHang.Properties.Resources.Advanced_Theme_Light_Scale_100;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(347, 31);
+            this.btnSua.Location = new System.Drawing.Point(218, 22);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(101, 31);
             this.btnSua.TabIndex = 2;
@@ -137,7 +165,7 @@ namespace QuanLyBanHang
             // 
             this.btnXoa.Image = global::QuanLyBanHang.Properties.Resources.icon_delete_2x;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(218, 31);
+            this.btnXoa.Location = new System.Drawing.Point(110, 22);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(101, 31);
             this.btnXoa.TabIndex = 1;
@@ -149,7 +177,7 @@ namespace QuanLyBanHang
             // 
             this.btnThem.Image = global::QuanLyBanHang.Properties.Resources.add_row;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(89, 31);
+            this.btnThem.Location = new System.Drawing.Point(3, 22);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(101, 31);
             this.btnThem.TabIndex = 0;
@@ -217,6 +245,7 @@ namespace QuanLyBanHang
             // 
             // dgvChatLieu
             // 
+            this.dgvChatLieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChatLieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChatLieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvChatLieu.Location = new System.Drawing.Point(0, 134);
@@ -277,5 +306,7 @@ namespace QuanLyBanHang
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnHienThiDS;
+        private System.Windows.Forms.Button btnTimKiem;
     }
 }

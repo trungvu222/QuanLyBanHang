@@ -84,5 +84,41 @@ namespace QuanLyBanHang
             if (e.KeyCode == Keys.Enter)
                 SendKeys.Send("{TAB}");
         }
+
+        private void pShow_Click(object sender, EventArgs e)
+        {
+            if (textBox_MatKhau.PasswordChar == '\0')
+            {
+                pHide.BringToFront();
+                textBox_MatKhau.PasswordChar = '•';
+            }
+        }
+
+        private void ptShow_Click(object sender, EventArgs e)
+        {
+            if (textBox_XNMatKhau.PasswordChar == '\0')
+            {
+                ptHide.BringToFront();
+                textBox_XNMatKhau.PasswordChar = '•';
+            }
+        }
+
+        private void pHide_Click_1(object sender, EventArgs e)
+        {
+            if (textBox_MatKhau.PasswordChar == '•')
+            {
+                pShow.BringToFront();
+                textBox_MatKhau.PasswordChar = '\0';
+            }
+        }
+
+        private void ptHide_Click_1(object sender, EventArgs e)
+        {
+            if (textBox_XNMatKhau.PasswordChar == '•')
+            {
+                ptShow.BringToFront();
+                textBox_XNMatKhau.PasswordChar = '\0';
+            }
+        }
     }
 }

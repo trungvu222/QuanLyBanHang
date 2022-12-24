@@ -12,6 +12,7 @@ using System.IO;
 using OfficeOpenXml;
 using Excel = Microsoft.Office.Interop.Excel;
 using QuanLyBanHang.Class;
+using System.Data.OleDb;
 
 namespace QuanLyBanHang
 {
@@ -376,6 +377,29 @@ namespace QuanLyBanHang
             application.ActiveWorkbook.Saved = true;
         }
 
+        //private void ImportExcel(string path)
+        //{
+        //    using (ExcelPackage excelPackage = new ExcelPackage(new FileInfo(path)))
+        //    {
+        //        ExcelWorksheet excelWorksheet = excelPackage.Workbook.Worksheets[0];
+        //        DataTable dataTable = new DataTable();
+        //        for(int i = excelWorksheet.Dimension.Start.Column;i<=excelWorksheet.Dimension.End.Column;i++)
+        //        {
+        //            dataTable.Columns.Add(excelWorksheet.Cells[1, i].Value.ToString());
+        //        }
+        //        for (int i = excelWorksheet.Dimension.Start.Row+1; i <= excelWorksheet.Dimension.End.Row; i++)
+        //        {
+        //            List<string> listRows = new List<string>();
+        //            for (int j = excelWorksheet.Dimension.Start.Column; j <= excelWorksheet.Dimension.End.Column; j++)
+        //            {
+        //                listRows.Add(excelWorksheet.Cells[i, j].Value.ToString());
+        //            }
+        //            dataTable.Rows.Add(listRows.ToArray());
+        //        }
+        //        dgvHang.DataSource = dataTable;
+        //    }
+        //}
+
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -386,13 +410,34 @@ namespace QuanLyBanHang
                 try
                 {
                     ExportExcel(saveFileDialog.FileName);
-                    MessageBox.Show("Xuất file thành công!");
+                    MessageBox.Show("Xuất hàng thành công!");
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Xuất file không thành công!\n" + ex.Message);
+                    MessageBox.Show("Xuất hàng không thành công!\n" + ex.Message);
                 }
             }
         }
+
+        //private void btnImportExcel_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (openFileDialog1.ShowDialog() == DialogResult.OK)
+        //        {
+        //            using (OleDbConnection myConnecct = new OleDbConnection(string.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=Excel 8.0;", openFileDialog1.FileName)))
+        //            {
+        //                DataTable dt = new DataTable();
+        //                OleDbDataAdapter cmd = new OleDbDataAdapter("select * from [Sheet1$]", myConnecct);
+        //                cmd.Fill(dt);
+        //                dgvHang.DataSource = dt;
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }         
+        //}
     }
 }

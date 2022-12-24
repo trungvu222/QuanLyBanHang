@@ -91,7 +91,7 @@ namespace QuanLyBanHang
             // 
             // btnDong
             // 
-            this.btnDong.Image = global::QuanLyBanHang.Properties.Resources.appicondefault_ecaa_32;
+            this.btnDong.Image = global::QuanLyBanHang.Properties.Resources.closebutton;
             this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDong.Location = new System.Drawing.Point(565, 19);
             this.btnDong.Name = "btnDong";
@@ -269,6 +269,7 @@ namespace QuanLyBanHang
             // 
             // dgvTKHoaDon
             // 
+            this.dgvTKHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTKHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTKHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTKHoaDon.Location = new System.Drawing.Point(0, 137);

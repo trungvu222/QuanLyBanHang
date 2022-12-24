@@ -60,7 +60,7 @@ namespace QuanLyBanHang
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyBanHang.Properties.Resources._0c02df78817ebf9f2eaa44afa0499a51;
+            this.pictureBox1.Image = global::QuanLyBanHang.Properties.Resources.Users;
             this.pictureBox1.Location = new System.Drawing.Point(131, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(262, 200);
@@ -94,9 +94,10 @@ namespace QuanLyBanHang
             // 
             // frmQuenMatKhau
             // 
+            this.AcceptButton = this.btnQuenMatKhau;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightBlue;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(534, 415);
             this.Controls.Add(this.btnQuenMatKhau);
             this.Controls.Add(this.txtEmailDangKy);
